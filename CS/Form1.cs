@@ -286,7 +286,7 @@ namespace dxKB3226 {
 			// Get the X-Axis of a Chart and adjust its labels.
 			Axis xAxis = ((XYDiagram)chart.Diagram).AxisX;
 			xAxis.Label.Angle = 45;
-			xAxis.Label.Antialiasing = true;
+			xAxis.Label.EnableAntialiasing = DevExpress.Utils.DefaultBoolean.True;
 
 			// Show the form.
 			form2.Text = form2.Text.Replace("Category", category);

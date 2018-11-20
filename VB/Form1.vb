@@ -19,11 +19,11 @@ Namespace dxKB3226
 		Private oleDbDataAdapter1 As System.Data.OleDb.OleDbDataAdapter
 		Private oleDbSelectCommand1 As System.Data.OleDb.OleDbCommand
 		Private oleDbConnection1 As System.Data.OleDb.OleDbConnection
-		Private dataSet11 As dxKB3226.DataSet1
-		Private WithEvents simpleButton1 As DevExpress.XtraEditors.SimpleButton
+        Private dataSet11 As DataSet1
+        Private WithEvents simpleButton1 As DevExpress.XtraEditors.SimpleButton
 		Private categoryName As DevExpress.XtraPivotGrid.PivotGridField
-		Private productName As DevExpress.XtraPivotGrid.PivotGridField
-		Private quantity As DevExpress.XtraPivotGrid.PivotGridField
+        Private productName_1 As DevExpress.XtraPivotGrid.PivotGridField
+        Private quantity As DevExpress.XtraPivotGrid.PivotGridField
 		Private orderDate_Year As DevExpress.XtraPivotGrid.PivotGridField
 		Private orderDate_Month As DevExpress.XtraPivotGrid.PivotGridField
 
@@ -65,10 +65,10 @@ Namespace dxKB3226
 		Private Sub InitializeComponent()
 			Dim resources As New System.ComponentModel.ComponentResourceManager(GetType(Form1))
 			Me.pivotGridControl1 = New DevExpress.XtraPivotGrid.PivotGridControl()
-			Me.dataSet11 = New dxKB3226.DataSet1()
-			Me.categoryName = New DevExpress.XtraPivotGrid.PivotGridField()
-			Me.productName = New DevExpress.XtraPivotGrid.PivotGridField()
-			Me.quantity = New DevExpress.XtraPivotGrid.PivotGridField()
+            Me.dataSet11 = New DataSet1()
+            Me.categoryName = New DevExpress.XtraPivotGrid.PivotGridField()
+            Me.productName_1 = New DevExpress.XtraPivotGrid.PivotGridField()
+            Me.quantity = New DevExpress.XtraPivotGrid.PivotGridField()
 			Me.orderDate_Year = New DevExpress.XtraPivotGrid.PivotGridField()
 			Me.orderDate_Month = New DevExpress.XtraPivotGrid.PivotGridField()
 			Me.oleDbDataAdapter1 = New System.Data.OleDb.OleDbDataAdapter()
@@ -84,8 +84,8 @@ Namespace dxKB3226
 			Me.pivotGridControl1.Anchor = (CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) Or System.Windows.Forms.AnchorStyles.Left) Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles))
 			Me.pivotGridControl1.Cursor = System.Windows.Forms.Cursors.Default
 			Me.pivotGridControl1.DataSource = Me.dataSet11.Employees
-			Me.pivotGridControl1.Fields.AddRange(New DevExpress.XtraPivotGrid.PivotGridField() { Me.categoryName, Me.productName, Me.quantity, Me.orderDate_Year, Me.orderDate_Month})
-			Me.pivotGridControl1.Location = New System.Drawing.Point(8, 48)
+            Me.pivotGridControl1.Fields.AddRange(New DevExpress.XtraPivotGrid.PivotGridField() {Me.categoryName, Me.productName_1, Me.quantity, Me.orderDate_Year, Me.orderDate_Month})
+            Me.pivotGridControl1.Location = New System.Drawing.Point(8, 48)
 			Me.pivotGridControl1.Name = "pivotGridControl1"
 			Me.pivotGridControl1.OptionsDataField.FieldNaming = DevExpress.XtraPivotGrid.DataFieldNaming.Name
 			Me.pivotGridControl1.Size = New System.Drawing.Size(735, 379)
@@ -103,17 +103,17 @@ Namespace dxKB3226
 			Me.categoryName.AreaIndex = 0
 			Me.categoryName.FieldName = "CategoryName"
 			Me.categoryName.Name = "categoryName"
-			' 
-			' productName
-			' 
-			Me.productName.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea
-			Me.productName.AreaIndex = 1
-			Me.productName.FieldName = "ProductName"
-			Me.productName.Name = "productName"
-			' 
-			' quantity
-			' 
-			Me.quantity.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea
+            ' 
+            ' productName_1
+            ' 
+            Me.productName_1.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea
+            Me.productName_1.AreaIndex = 1
+            Me.productName_1.FieldName = "ProductName"
+            Me.productName_1.Name = "productName"
+            ' 
+            ' quantity
+            ' 
+            Me.quantity.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea
 			Me.quantity.AreaIndex = 0
 			Me.quantity.FieldName = "Quantity"
 			Me.quantity.Name = "quantity"
@@ -218,10 +218,10 @@ Namespace dxKB3226
 			' Get the X-Axis of a Chart and adjust its labels.
 			Dim xAxis As Axis = (CType(chart.Diagram, XYDiagram)).AxisX
 			xAxis.Label.Angle = 45
-			xAxis.Label.Antialiasing = True
+            xAxis.Label.EnableAntialiasing = DevExpress.Utils.DefaultBoolean.True
 
-			' Show the form.
-			form2.Text = form2.Text.Replace("Category", category)
+            ' Show the form.
+            form2.Text = form2.Text.Replace("Category", category)
 			form2.Text = form2.Text.Replace("Year", year.ToString())
 			form2.Show()
 		End Sub
