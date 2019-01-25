@@ -3,7 +3,7 @@
 
 * [Form1.cs](./CS/Form1.cs) (VB: [Form1.vb](./VB/Form1.vb))
 <!-- default file list end -->
-# How to represent the PivotGridControl's data within XtraCharts
+# How to display the PivotGridControl's data in XtraCharts
 
 
 > This example is outdated. Refer to the [E2911](https://github.com/DevExpress-Examples/how-to-visualize-pivot-grid-data-via-the-xtracharts-suite-e2911) example.
