@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
   <PropertyGroup>
     <ProjectType>Local</ProjectType>
     <ProductVersion>8.0.50727</ProductVersion>
@@ -8,45 +8,58 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ApplicationIcon>App.ico</ApplicationIcon>
-    <AssemblyKeyContainerName></AssemblyKeyContainerName>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
     <AssemblyName>dxKB3226</AssemblyName>
-    <AssemblyOriginatorKeyFile></AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
     <DefaultClientScript>JScript</DefaultClientScript>
     <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
     <DefaultTargetSchema>IE50</DefaultTargetSchema>
     <DelaySign>false</DelaySign>
     <OutputType>WinExe</OutputType>
     <RootNamespace>dxKB3226</RootNamespace>
-    <StartupObject></StartupObject>
-    <FileUpgradeFlags></FileUpgradeFlags>
-    <UpgradeBackupLocation></UpgradeBackupLocation>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\Debug\</OutputPath>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
-    <ConfigurationOverrideFile></ConfigurationOverrideFile>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DocumentationFile></DocumentationFile>
+    <DocumentationFile>
+    </DocumentationFile>
     <DebugSymbols>true</DebugSymbols>
     <FileAlignment>4096</FileAlignment>
     <Optimize>false</Optimize>
     <RegisterForComInterop>false</RegisterForComInterop>
     <RemoveIntegerChecks>false</RemoveIntegerChecks>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningLevel>4</WarningLevel>
     <DebugType>full</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
-    <ConfigurationOverrideFile></ConfigurationOverrideFile>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
     <DefineConstants>TRACE</DefineConstants>
-    <DocumentationFile></DocumentationFile>
+    <DocumentationFile>
+    </DocumentationFile>
     <DebugSymbols>false</DebugSymbols>
     <FileAlignment>4096</FileAlignment>
     <Optimize>true</Optimize>
@@ -58,29 +71,38 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Charts.v8.2.Core">
-      <Name>DevExpress.Charts.v8.2.Core</Name>
+    <Reference Include="DevExpress.Charts.v13.1.Core">
+      <Name>DevExpress.Charts.v13.1.Core</Name>
     </Reference>
-    <Reference Include="DevExpress.Data.v8.2">
-      <Name>DevExpress.Data.v8.2</Name>
+    <Reference Include="DevExpress.Printing.v13.1.Core">
+      <Name>DevExpress.Printing.v13.1.Core</Name>
     </Reference>
-    <Reference Include="DevExpress.Utils.v8.2">
-      <Name>DevExpress.Utils.v8.2</Name>
+    <Reference Include="DevExpress.Data.v13.1">
+      <Name>DevExpress.Data.v13.1</Name>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v8.2">
-      <Name>DevExpress.XtraCharts.v8.2</Name>
+    <Reference Include="DevExpress.Utils.v13.1">
+      <Name>DevExpress.Utils.v13.1</Name>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v8.2.UI">
-      <Name>DevExpress.XtraCharts.v8.2.UI</Name>
+    <Reference Include="DevExpress.XtraCharts.v13.1.Wizard">
+      <Name>DevExpress.XtraCharts.v13.1.Wizard</Name>
     </Reference>
-    <Reference Include="DevExpress.XtraEditors.v8.2">
-      <Name>DevExpress.XtraEditors.v8.2</Name>
+    <Reference Include="DevExpress.XtraCharts.v13.1">
+      <Name>DevExpress.XtraCharts.v13.1</Name>
     </Reference>
-    <Reference Include="DevExpress.XtraPivotGrid.v8.2">
-      <Name>DevExpress.XtraPivotGrid.v8.2</Name>
+    <Reference Include="DevExpress.XtraPrinting.v13.1">
+      <Name>DevExpress.XtraPrinting.v13.1</Name>
     </Reference>
-    <Reference Include="DevExpress.XtraPivotGrid.v8.2.Core">
-      <Name>DevExpress.XtraPivotGrid.v8.2.Core</Name>
+    <Reference Include="DevExpress.XtraCharts.v13.1.UI">
+      <Name>DevExpress.XtraCharts.v13.1.UI</Name>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v13.1">
+      <Name>DevExpress.XtraEditors.v13.1</Name>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v13.1">
+      <Name>DevExpress.XtraPivotGrid.v13.1</Name>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v13.1.Core">
+      <Name>DevExpress.PivotGrid.v13.1.Core</Name>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>
@@ -88,6 +110,7 @@
     <Reference Include="System.Data">
       <Name>System.Data</Name>
     </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing">
       <Name>System.Drawing</Name>
     </Reference>
@@ -118,6 +141,9 @@
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Content Include="nwind.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,9 +151,20 @@
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent></PreBuildEvent>
-    <PostBuildEvent></PostBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>

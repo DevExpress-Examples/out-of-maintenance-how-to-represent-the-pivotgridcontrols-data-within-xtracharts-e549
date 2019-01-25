@@ -1,11 +1,8 @@
-#Region "Imports"
-Imports Microsoft.VisualBasic
+﻿#Region "Using"
+Imports DevExpress.XtraCharts
+Imports DevExpress.XtraPivotGrid
 Imports System
 Imports System.Windows.Forms
-
-Imports DevExpress.XtraPivotGrid
-Imports DevExpress.XtraCharts
-Imports DevExpress.Data.PivotGrid
 #End Region
 
 Namespace dxKB3226
@@ -13,8 +10,9 @@ Namespace dxKB3226
 	''' Summary description for Form1.
 	''' </summary>
 	Public Class Form1
-		#Region "Windows Form Designer generated code"
 		Inherits System.Windows.Forms.Form
+
+		#Region "Windows Form Designer generated code"
 		Private pivotGridControl1 As DevExpress.XtraPivotGrid.PivotGridControl
 		Private oleDbDataAdapter1 As System.Data.OleDb.OleDbDataAdapter
 		Private oleDbSelectCommand1 As System.Data.OleDb.OleDbCommand
@@ -22,13 +20,11 @@ Namespace dxKB3226
 		Private dataSet11 As dxKB3226.DataSet1
 		Private WithEvents simpleButton1 As DevExpress.XtraEditors.SimpleButton
 		Private categoryName As DevExpress.XtraPivotGrid.PivotGridField
-		Private productName As DevExpress.XtraPivotGrid.PivotGridField
+'INSTANT VB NOTE: The variable productName was renamed since Visual Basic does not allow variables and other class members to have the same name:
+		Private productName_Renamed As DevExpress.XtraPivotGrid.PivotGridField
 		Private quantity As DevExpress.XtraPivotGrid.PivotGridField
 		Private orderDate_Year As DevExpress.XtraPivotGrid.PivotGridField
 		Private orderDate_Month As DevExpress.XtraPivotGrid.PivotGridField
-
-		Private category As String = "Beverages"
-		Private year As Integer = 1994
 
 		''' <summary>
 		''' Required designer variable.
@@ -49,7 +45,7 @@ Namespace dxKB3226
 		''' <summary>
 		''' Clean up any resources being used.
 		''' </summary>
-		Protected Overrides Overloads Sub Dispose(ByVal disposing As Boolean)
+		Protected Overrides Sub Dispose(ByVal disposing As Boolean)
 			If disposing Then
 				If components IsNot Nothing Then
 					components.Dispose()
@@ -67,7 +63,7 @@ Namespace dxKB3226
 			Me.pivotGridControl1 = New DevExpress.XtraPivotGrid.PivotGridControl()
 			Me.dataSet11 = New dxKB3226.DataSet1()
 			Me.categoryName = New DevExpress.XtraPivotGrid.PivotGridField()
-			Me.productName = New DevExpress.XtraPivotGrid.PivotGridField()
+			Me.productName_Renamed = New DevExpress.XtraPivotGrid.PivotGridField()
 			Me.quantity = New DevExpress.XtraPivotGrid.PivotGridField()
 			Me.orderDate_Year = New DevExpress.XtraPivotGrid.PivotGridField()
 			Me.orderDate_Month = New DevExpress.XtraPivotGrid.PivotGridField()
@@ -75,8 +71,8 @@ Namespace dxKB3226
 			Me.oleDbSelectCommand1 = New System.Data.OleDb.OleDbCommand()
 			Me.oleDbConnection1 = New System.Data.OleDb.OleDbConnection()
 			Me.simpleButton1 = New DevExpress.XtraEditors.SimpleButton()
-			CType(Me.pivotGridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-			CType(Me.dataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
+			DirectCast(Me.pivotGridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+			DirectCast(Me.dataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
 			Me.SuspendLayout()
 			' 
 			' pivotGridControl1
@@ -84,7 +80,7 @@ Namespace dxKB3226
 			Me.pivotGridControl1.Anchor = (CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) Or System.Windows.Forms.AnchorStyles.Left) Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles))
 			Me.pivotGridControl1.Cursor = System.Windows.Forms.Cursors.Default
 			Me.pivotGridControl1.DataSource = Me.dataSet11.Employees
-			Me.pivotGridControl1.Fields.AddRange(New DevExpress.XtraPivotGrid.PivotGridField() { Me.categoryName, Me.productName, Me.quantity, Me.orderDate_Year, Me.orderDate_Month})
+			Me.pivotGridControl1.Fields.AddRange(New DevExpress.XtraPivotGrid.PivotGridField() { Me.categoryName, Me.productName_Renamed, Me.quantity, Me.orderDate_Year, Me.orderDate_Month})
 			Me.pivotGridControl1.Location = New System.Drawing.Point(8, 48)
 			Me.pivotGridControl1.Name = "pivotGridControl1"
 			Me.pivotGridControl1.OptionsDataField.FieldNaming = DevExpress.XtraPivotGrid.DataFieldNaming.Name
@@ -106,10 +102,10 @@ Namespace dxKB3226
 			' 
 			' productName
 			' 
-			Me.productName.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea
-			Me.productName.AreaIndex = 1
-			Me.productName.FieldName = "ProductName"
-			Me.productName.Name = "productName"
+			Me.productName_Renamed.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea
+			Me.productName_Renamed.AreaIndex = 1
+			Me.productName_Renamed.FieldName = "ProductName"
+			Me.productName_Renamed.Name = "productName"
 			' 
 			' quantity
 			' 
@@ -156,8 +152,9 @@ Namespace dxKB3226
 			Me.simpleButton1.Name = "simpleButton1"
 			Me.simpleButton1.Size = New System.Drawing.Size(192, 32)
 			Me.simpleButton1.TabIndex = 2
-			Me.simpleButton1.Text = "Show Chart for Category in Year"
-'			Me.simpleButton1.Click += New System.EventHandler(Me.simpleButton1_Click);
+			Me.simpleButton1.Text = "Show Chart"
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
 			' 
 			' Form1
 			' 
@@ -167,9 +164,10 @@ Namespace dxKB3226
 			Me.Controls.Add(Me.pivotGridControl1)
 			Me.Name = "Form1"
 			Me.Text = "Form1"
-'			Me.Load += New System.EventHandler(Me.Form1_Load);
-			CType(Me.pivotGridControl1, System.ComponentModel.ISupportInitialize).EndInit()
-			CType(Me.dataSet11, System.ComponentModel.ISupportInitialize).EndInit()
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.Load += new System.EventHandler(this.Form1_Load);
+			DirectCast(Me.pivotGridControl1, System.ComponentModel.ISupportInitialize).EndInit()
+			DirectCast(Me.dataSet11, System.ComponentModel.ISupportInitialize).EndInit()
 			Me.ResumeLayout(False)
 
 		End Sub
@@ -177,22 +175,22 @@ Namespace dxKB3226
 		''' <summary>
 		''' The main entry point for the application.
 		''' </summary>
-		<STAThread> _
+		<STAThread>
 		Shared Sub Main()
 			Application.Run(New Form1())
 		End Sub
 		#End Region
 
-		#Region "Form1_Load"
-		Private Sub Form1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles MyBase.Load
+		#Region "Form_Load"
+		Private Sub Form1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 			oleDbDataAdapter1.Fill(dataSet11)
-
-			simpleButton1.Text = simpleButton1.Text.Replace("Category", category)
-			simpleButton1.Text = simpleButton1.Text.Replace("Year", year.ToString())
 		End Sub
 		#End Region
 
 		Private Sub simpleButton1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles simpleButton1.Click
+			Dim year As Integer = 2015
+			Dim category As String = "Beverages"
+
 			Dim form2 As New Form2()
 			Dim chart As ChartControl = form2.chartControl1
 
@@ -216,15 +214,14 @@ Namespace dxKB3226
 			chart.SeriesSorting = SortingMode.Ascending
 
 			' Get the X-Axis of a Chart and adjust its labels.
-			Dim xAxis As Axis = (CType(chart.Diagram, XYDiagram)).AxisX
+			Dim xAxis As Axis = CType(chart.Diagram, XYDiagram).AxisX
 			xAxis.Label.Angle = 45
-			xAxis.Label.Antialiasing = True
+			xAxis.Label.EnableAntialiasing = DevExpress.Utils.DefaultBoolean.True
+
 
 			' Show the form.
-			form2.Text = form2.Text.Replace("Category", category)
-			form2.Text = form2.Text.Replace("Year", year.ToString())
+			form2.Text = String.Format("{0}, {1}", category, year)
 			form2.Show()
 		End Sub
-
 	End Class
 End Namespace

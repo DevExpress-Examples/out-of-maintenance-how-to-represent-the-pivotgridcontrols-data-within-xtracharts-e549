@@ -112,30 +112,30 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="dataSet11.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="dataSet11.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>307, 17</value>
   </metadata>
-  <metadata name="oleDbDataAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="oleDbDataAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="oleDbSelectCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="oleDbSelectCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="oleDbSelectCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="oleDbSelectCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="oleDbSelectCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
+  </metadata>
+  <metadata name="oleDbSelectCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
   <data name="oleDbSelectCommand1.CommandText" xml:space="preserve">
     <value>SELECT Products.CategoryID, Products.Discontinued, Products.EAN13, Products.ProductID, Products.ProductName, Products.QuantityPerUnit, Products.ReorderLevel, Products.SupplierID, Products.UnitPrice, Products.UnitsInStock, Products.UnitsOnOrder, [Order Details].Discount, [Order Details].OrderID, [Order Details].ProductID AS Expr1, [Order Details].Quantity, [Order Details].UnitPrice AS Expr2, Orders.CustomerID, Orders.EmployeeID, Orders.Freight, Orders.OrderDate, Orders.OrderID AS Expr3, Orders.RequiredDate, Orders.ShipAddress, Orders.ShipCity, Orders.ShipCountry, Orders.ShipName, Orders.ShippedDate, Orders.ShipPostalCode, Orders.ShipRegion, Orders.ShipVia, Employees.Address, Employees.BirthDate, Employees.City, Employees.Country, Employees.EmployeeID AS Expr4, Employees.Extension, Employees.FirstName, Employees.HireDate, Employees.HomePhone, Employees.LastName, Employees.Notes, Employees.Photo, Employees.PostalCode, Employees.Region, Employees.ReportsTo, Employees.Title, Employees.TitleOfCourtesy, Categories.CategoryID AS Expr5, Categories.CategoryName, Categories.Description, Categories.Picture, Customers.Address AS Expr6, Customers.City AS Expr7, Customers.CompanyName, Customers.ContactName, Customers.ContactTitle, Customers.Country AS Expr8, Customers.CustomerID AS Expr9, Customers.Fax, Customers.Phone, Customers.PostalCode AS Expr10, Customers.Region AS Expr11 FROM (Employees INNER JOIN ((Orders INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID) INNER JOIN ((Products INNER JOIN [Order Details] ON Products.ProductID = [Order Details].ProductID) INNER JOIN Categories ON Products.CategoryID = Categories.CategoryID) ON Orders.OrderID = [Order Details].OrderID) ON Employees.EmployeeID = Orders.EmployeeID)</value>
   </data>
-  <metadata name="oleDbConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="oleDbConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>165, 17</value>
   </metadata>
   <data name="oleDbConnection1.ConnectionString" xml:space="preserve">

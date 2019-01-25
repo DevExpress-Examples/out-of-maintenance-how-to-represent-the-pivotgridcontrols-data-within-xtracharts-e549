@@ -1,17 +1,16 @@
 #region Using
+using DevExpress.XtraCharts;
+using DevExpress.XtraPivotGrid;
 using System;
 using System.Windows.Forms;
-
-using DevExpress.XtraPivotGrid;
-using DevExpress.XtraCharts;
-using DevExpress.Data.PivotGrid;
 #endregion
 
-namespace dxKB3226 {
-	/// <summary>
-	/// Summary description for Form1.
-	/// </summary>
-	public class Form1 : System.Windows.Forms.Form {
+namespace dxKB3226
+{
+    /// <summary>
+    /// Summary description for Form1.
+    /// </summary>
+    public class Form1 : System.Windows.Forms.Form {
 		#region Windows Form Designer generated code
 		private DevExpress.XtraPivotGrid.PivotGridControl pivotGridControl1;
 		private System.Data.OleDb.OleDbDataAdapter oleDbDataAdapter1;
@@ -24,9 +23,6 @@ namespace dxKB3226 {
 		private DevExpress.XtraPivotGrid.PivotGridField quantity;
 		private DevExpress.XtraPivotGrid.PivotGridField orderDate_Year;
 		private DevExpress.XtraPivotGrid.PivotGridField orderDate_Month;
-
-		private string category = "Beverages";
-		private int year = 1994;
 
 		/// <summary>
 		/// Required designer variable.
@@ -61,90 +57,90 @@ namespace dxKB3226 {
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-			this.pivotGridControl1 = new DevExpress.XtraPivotGrid.PivotGridControl();
-			this.dataSet11 = new dxKB3226.DataSet1();
-			this.categoryName = new DevExpress.XtraPivotGrid.PivotGridField();
-			this.productName = new DevExpress.XtraPivotGrid.PivotGridField();
-			this.quantity = new DevExpress.XtraPivotGrid.PivotGridField();
-			this.orderDate_Year = new DevExpress.XtraPivotGrid.PivotGridField();
-			this.orderDate_Month = new DevExpress.XtraPivotGrid.PivotGridField();
-			this.oleDbDataAdapter1 = new System.Data.OleDb.OleDbDataAdapter();
-			this.oleDbSelectCommand1 = new System.Data.OleDb.OleDbCommand();
-			this.oleDbConnection1 = new System.Data.OleDb.OleDbConnection();
-			this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-			((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
-			this.SuspendLayout();
-			// 
-			// pivotGridControl1
-			// 
-			this.pivotGridControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-						| System.Windows.Forms.AnchorStyles.Left)
-						| System.Windows.Forms.AnchorStyles.Right)));
-			this.pivotGridControl1.Cursor = System.Windows.Forms.Cursors.Default;
-			this.pivotGridControl1.DataSource = this.dataSet11.Employees;
-			this.pivotGridControl1.Fields.AddRange(new DevExpress.XtraPivotGrid.PivotGridField[] {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.pivotGridControl1 = new DevExpress.XtraPivotGrid.PivotGridControl();
+            this.dataSet11 = new dxKB3226.DataSet1();
+            this.categoryName = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.productName = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.quantity = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.orderDate_Year = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.orderDate_Month = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.oleDbDataAdapter1 = new System.Data.OleDb.OleDbDataAdapter();
+            this.oleDbSelectCommand1 = new System.Data.OleDb.OleDbCommand();
+            this.oleDbConnection1 = new System.Data.OleDb.OleDbConnection();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // pivotGridControl1
+            // 
+            this.pivotGridControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pivotGridControl1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pivotGridControl1.DataSource = this.dataSet11.Employees;
+            this.pivotGridControl1.Fields.AddRange(new DevExpress.XtraPivotGrid.PivotGridField[] {
             this.categoryName,
             this.productName,
             this.quantity,
             this.orderDate_Year,
             this.orderDate_Month});
-			this.pivotGridControl1.Location = new System.Drawing.Point(8, 48);
-			this.pivotGridControl1.Name = "pivotGridControl1";
-			this.pivotGridControl1.OptionsDataField.FieldNaming = DevExpress.XtraPivotGrid.DataFieldNaming.Name;
-			this.pivotGridControl1.Size = new System.Drawing.Size(735, 379);
-			this.pivotGridControl1.TabIndex = 0;
-			// 
-			// dataSet11
-			// 
-			this.dataSet11.DataSetName = "DataSet1";
-			this.dataSet11.Locale = new System.Globalization.CultureInfo("ru-RU");
-			this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-			// 
-			// categoryName
-			// 
-			this.categoryName.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
-			this.categoryName.AreaIndex = 0;
-			this.categoryName.FieldName = "CategoryName";
-			this.categoryName.Name = "categoryName";
-			// 
-			// productName
-			// 
-			this.productName.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
-			this.productName.AreaIndex = 1;
-			this.productName.FieldName = "ProductName";
-			this.productName.Name = "productName";
-			// 
-			// quantity
-			// 
-			this.quantity.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
-			this.quantity.AreaIndex = 0;
-			this.quantity.FieldName = "Quantity";
-			this.quantity.Name = "quantity";
-			// 
-			// orderDate_Year
-			// 
-			this.orderDate_Year.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea;
-			this.orderDate_Year.AreaIndex = 0;
-			this.orderDate_Year.FieldName = "OrderDate";
-			this.orderDate_Year.GroupInterval = DevExpress.XtraPivotGrid.PivotGroupInterval.DateYear;
-			this.orderDate_Year.Name = "orderDate_Year";
-			this.orderDate_Year.UnboundFieldName = "orderDate_Year";
-			// 
-			// orderDate_Month
-			// 
-			this.orderDate_Month.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea;
-			this.orderDate_Month.AreaIndex = 1;
-			this.orderDate_Month.FieldName = "OrderDate";
-			this.orderDate_Month.GroupInterval = DevExpress.XtraPivotGrid.PivotGroupInterval.DateMonth;
-			this.orderDate_Month.Name = "orderDate_Month";
-			this.orderDate_Month.UnboundFieldName = "orderDate_Month";
-			// 
-			// oleDbDataAdapter1
-			// 
-			this.oleDbDataAdapter1.SelectCommand = this.oleDbSelectCommand1;
-			this.oleDbDataAdapter1.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
+            this.pivotGridControl1.Location = new System.Drawing.Point(8, 48);
+            this.pivotGridControl1.Name = "pivotGridControl1";
+            this.pivotGridControl1.OptionsDataField.FieldNaming = DevExpress.XtraPivotGrid.DataFieldNaming.Name;
+            this.pivotGridControl1.Size = new System.Drawing.Size(735, 379);
+            this.pivotGridControl1.TabIndex = 0;
+            // 
+            // dataSet11
+            // 
+            this.dataSet11.DataSetName = "DataSet1";
+            this.dataSet11.Locale = new System.Globalization.CultureInfo("ru-RU");
+            this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // categoryName
+            // 
+            this.categoryName.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
+            this.categoryName.AreaIndex = 0;
+            this.categoryName.FieldName = "CategoryName";
+            this.categoryName.Name = "categoryName";
+            // 
+            // productName
+            // 
+            this.productName.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
+            this.productName.AreaIndex = 1;
+            this.productName.FieldName = "ProductName";
+            this.productName.Name = "productName";
+            // 
+            // quantity
+            // 
+            this.quantity.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
+            this.quantity.AreaIndex = 0;
+            this.quantity.FieldName = "Quantity";
+            this.quantity.Name = "quantity";
+            // 
+            // orderDate_Year
+            // 
+            this.orderDate_Year.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea;
+            this.orderDate_Year.AreaIndex = 0;
+            this.orderDate_Year.FieldName = "OrderDate";
+            this.orderDate_Year.GroupInterval = DevExpress.XtraPivotGrid.PivotGroupInterval.DateYear;
+            this.orderDate_Year.Name = "orderDate_Year";
+            this.orderDate_Year.UnboundFieldName = "orderDate_Year";
+            // 
+            // orderDate_Month
+            // 
+            this.orderDate_Month.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea;
+            this.orderDate_Month.AreaIndex = 1;
+            this.orderDate_Month.FieldName = "OrderDate";
+            this.orderDate_Month.GroupInterval = DevExpress.XtraPivotGrid.PivotGroupInterval.DateMonth;
+            this.orderDate_Month.Name = "orderDate_Month";
+            this.orderDate_Month.UnboundFieldName = "orderDate_Month";
+            // 
+            // oleDbDataAdapter1
+            // 
+            this.oleDbDataAdapter1.SelectCommand = this.oleDbSelectCommand1;
+            this.oleDbDataAdapter1.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
             new System.Data.Common.DataTableMapping("Table", "Employees", new System.Data.Common.DataColumnMapping[] {
                         new System.Data.Common.DataColumnMapping("Products.ProductID", "Products.ProductID"),
                         new System.Data.Common.DataColumnMapping("ProductName", "ProductName"),
@@ -208,37 +204,37 @@ namespace dxKB3226 {
                         new System.Data.Common.DataColumnMapping("Customers.Country", "Customers.Country"),
                         new System.Data.Common.DataColumnMapping("Phone", "Phone"),
                         new System.Data.Common.DataColumnMapping("Fax", "Fax")})});
-			// 
-			// oleDbSelectCommand1
-			// 
-			this.oleDbSelectCommand1.CommandText = resources.GetString("oleDbSelectCommand1.CommandText");
-			this.oleDbSelectCommand1.Connection = this.oleDbConnection1;
-			// 
-			// oleDbConnection1
-			// 
-			this.oleDbConnection1.ConnectionString = resources.GetString("oleDbConnection1.ConnectionString");
-			// 
-			// simpleButton1
-			// 
-			this.simpleButton1.Location = new System.Drawing.Point(8, 8);
-			this.simpleButton1.Name = "simpleButton1";
-			this.simpleButton1.Size = new System.Drawing.Size(192, 32);
-			this.simpleButton1.TabIndex = 2;
-			this.simpleButton1.Text = "Show Chart for Category in Year";
-			this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-			// 
-			// Form1
-			// 
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-			this.ClientSize = new System.Drawing.Size(751, 439);
-			this.Controls.Add(this.simpleButton1);
-			this.Controls.Add(this.pivotGridControl1);
-			this.Name = "Form1";
-			this.Text = "Form1";
-			this.Load += new System.EventHandler(this.Form1_Load);
-			((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
-			this.ResumeLayout(false);
+            // 
+            // oleDbSelectCommand1
+            // 
+            this.oleDbSelectCommand1.CommandText = resources.GetString("oleDbSelectCommand1.CommandText");
+            this.oleDbSelectCommand1.Connection = this.oleDbConnection1;
+            // 
+            // oleDbConnection1
+            // 
+            this.oleDbConnection1.ConnectionString = resources.GetString("oleDbConnection1.ConnectionString");
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Location = new System.Drawing.Point(8, 8);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(192, 32);
+            this.simpleButton1.TabIndex = 2;
+            this.simpleButton1.Text = "Show Chart";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+            this.ClientSize = new System.Drawing.Size(751, 439);
+            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.pivotGridControl1);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
+            this.ResumeLayout(false);
 
 		}
 
@@ -254,14 +250,14 @@ namespace dxKB3226 {
 		#region Form_Load
 		private void Form1_Load(object sender, System.EventArgs e) {
 			oleDbDataAdapter1.Fill(dataSet11);
-
-			simpleButton1.Text = simpleButton1.Text.Replace("Category", category);
-			simpleButton1.Text = simpleButton1.Text.Replace("Year", year.ToString());
 		}
 		#endregion
 
 		private void simpleButton1_Click(object sender, System.EventArgs e) {
-			Form2 form2 = new Form2();
+            int year = 2015;
+            string category = "Beverages";
+
+            Form2 form2 = new Form2();
 			ChartControl chart = form2.chartControl1;
 
 			PivotSummaryDataSource ds = pivotGridControl1.CreateSummaryDataSource();
@@ -271,7 +267,7 @@ namespace dxKB3226 {
 
 			// Every month will be represented as a single series in the chart.
 			chart.SeriesDataMember = "orderDate_Month";
-
+            
 			// Every product will be a series point argument.
 			chart.SeriesTemplate.ArgumentDataMember = "productName";
 
@@ -286,13 +282,12 @@ namespace dxKB3226 {
 			// Get the X-Axis of a Chart and adjust its labels.
 			Axis xAxis = ((XYDiagram)chart.Diagram).AxisX;
 			xAxis.Label.Angle = 45;
-			xAxis.Label.Antialiasing = true;
+            xAxis.Label.EnableAntialiasing = DevExpress.Utils.DefaultBoolean.True;
 
-			// Show the form.
-			form2.Text = form2.Text.Replace("Category", category);
-			form2.Text = form2.Text.Replace("Year", year.ToString());
+
+            // Show the form.
+            form2.Text = String.Format("{0}, {1}", category, year);
 			form2.Show();
 		}
-
 	}
 }

@@ -51,31 +51,34 @@ namespace dxKB3226
 		/// </summary>
 		private void InitializeComponent()
 		{
-         this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
-         ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
-         this.SuspendLayout();
-         // 
-         // chartControl1
-         // 
-         this.chartControl1.Anchor = (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel1 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
+            this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // chartControl1
+            // 
+            this.chartControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right);
-         this.chartControl1.Diagram = null;
-         this.chartControl1.Location = new System.Drawing.Point(8, 8);
-         this.chartControl1.Name = "chartControl1";
-         this.chartControl1.Size = new System.Drawing.Size(856, 440);
-         this.chartControl1.TabIndex = 0;
-         // 
-         // Form2
-         // 
-         this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
-         this.ClientSize = new System.Drawing.Size(872, 454);
-         this.Controls.AddRange(new System.Windows.Forms.Control[] {
-                                                                      this.chartControl1});
-         this.Name = "Form2";
-         this.Text = "Category, Year";
-         ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
-         this.ResumeLayout(false);
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chartControl1.Location = new System.Drawing.Point(8, 8);
+            this.chartControl1.Name = "chartControl1";
+            this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
+            sideBySideBarSeriesLabel1.LineVisible = true;
+            this.chartControl1.SeriesTemplate.Label = sideBySideBarSeriesLabel1;
+            this.chartControl1.Size = new System.Drawing.Size(856, 440);
+            this.chartControl1.TabIndex = 0;
+            // 
+            // Form2
+            // 
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+            this.ClientSize = new System.Drawing.Size(872, 454);
+            this.Controls.Add(this.chartControl1);
+            this.Name = "Form2";
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
+            this.ResumeLayout(false);
 
       }
 		#endregion
