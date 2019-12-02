@@ -279,8 +279,7 @@ namespace dxKB3226 {
 			chart.SeriesTemplate.ValueDataMembers.AddRange(new string[] { "quantity_Sum" });
 
 			// Filter chart's datasource by category and year.
-			chart.SeriesTemplate.DataFilters.Add("categoryName", "System.String", DataFilterCondition.Equal, category);
-			chart.SeriesTemplate.DataFilters.Add("orderDate_Year", "System.Int32", DataFilterCondition.Equal, year);
+			chart.SeriesTemplate.FilterString = string.Format("[categoryName] = '{0}' And [orderDate_Year] = {1}", category, year);
 			chart.SeriesSorting = SortingMode.Ascending;
 
 			// Get the X-Axis of a Chart and adjust its labels.
